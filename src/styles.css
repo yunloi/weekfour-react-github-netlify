@@ -1,0 +1,131 @@
+body {
+  font-family: "Patua One", cursive;
+}
+
+.current-date-time {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.city {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+
+h4 {
+  margin: 15px;
+}
+
+h5 {
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  margin: -10px 30px 30px 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.weather-frame {
+  padding: 20px;
+  border: 1px solid #1d1e20;
+  border-radius: 5px;
+
+  background: rgb(146, 201, 247);
+}
+
+.temperature {
+  font-size: 70px;
+}
+
+.units {
+  font-size: 25px;
+  position: relative;
+  top: -30px;
+}
+
+.now {
+  top: 30px;
+  position: relative;
+}
+
+.now:first-letter {
+  text-transform: capitalize;
+}
+
+.fix-icon img {
+  display: block;
+  position: relative;
+  margin-left: 90px;
+  margin-top: -40px;
+  height: 200px;
+  width: 200px;
+}
+
+.current-weather {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+  opacity: 75%;
+}
+
+.current-weather .active {
+  color: #212529;
+  cursor: default;
+}
+
+.current-weather .active:hover {
+  text-decoration: none;
+}
+
+.extra-info {
+  display: block;
+  margin: 0 auto;
+  background: rgba(247, 156, 156, 0.683);
+  text-align: center;
+  width: 180px;
+  padding: 5px;
+}
+
+.forecast {
+  background: rgb(247, 156, 156, 0.683);
+  width: 150px;
+  padding: 5px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.forecast-border {
+  margin: 30px 0 50px 0;
+}
+
+.forecast img {
+  display: block;
+  margin: 0 auto;
+}
+
+.source-code {
+  margin: 0 auto;
+}
