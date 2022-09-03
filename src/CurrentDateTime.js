@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.css";
 
 let now = new Date();
 let days = [
@@ -39,7 +40,7 @@ export default function CurrentDateTime() {
   }
 
   return (
-    <div>
+    <div className="current-date-time">
       {day}, {month} {date} at {hours}:{minutes}
     </div>
   );

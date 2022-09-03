@@ -1,8 +1,6 @@
 import React from "react";
 import Search from "./Search";
 import CurrentDateTime from "./CurrentDateTime";
-import CurrentTemperature from "./Temperature";
-import Extra from "./ExtraInfo";
 import "./styles.css";
 
 export default function App() {
@@ -39,49 +37,7 @@ export default function App() {
         <div className="container">
           <div className="wrapper">
             <div className="weather-frame">
-              <Search />
-              <h2 className="current-date-time">
-                <CurrentDateTime />
-              </h2>
-
-              <div className="row">
-                <div className="col-4">
-                  <div className="fix-icon">
-                    <img
-                      src="https://icons-for-free.com/iconfiles/png/512/sun+sunny+weather+icon-1320196635525068067.png"
-                      alt="Clear"
-                      class="icon"
-                      id="weather-icon"
-                    />
-                  </div>
-                </div>
-
-                <div className="col-3">
-                  <div className="card current-weather">
-                    <h3 className="temperature-now">
-                      <span className="temperature" id="temperature-reading">
-                        <CurrentTemperature now={12} />
-                      </span>
-                      <span className="units">
-                        <a href="#" class="active" id="link-celsius">
-                          ℃
-                        </a>{" "}
-                        |
-                        <a href="#" id="link-fahrenheit">
-                          ℉
-                        </a>
-                        <div className="now" id="temperature-description">
-                          Now
-                        </div>
-                      </span>
-                    </h3>
-                  </div>
-                </div>
-
-                <div className="col-3">
-                  <Extra maxTemp={25} minTemp={6} wind={2} humidity={10} />
-                </div>
-              </div>
+              <Search defaultCity="Sydney" />
 
               <hr />
               <h4>Next 5 Days</h4>
