@@ -1,4 +1,6 @@
 import React from "react";
+import Search from "./Search";
+import CurrentDateTime from "./CurrentDateTime";
 import CurrentTemperature from "./Temperature";
 import Extra from "./ExtraInfo";
 import "./styles.css";
@@ -37,38 +39,9 @@ export default function App() {
         <div className="container">
           <div className="wrapper">
             <div className="weather-frame">
-              <form id="search-city-form">
-                <div className="row">
-                  <div className="col-6">
-                    <input
-                      type="text"
-                      placeholder="Enter your City..."
-                      autocomplete="off"
-                      autofocus="on"
-                      id="search-city-input"
-                      class="form-control search-city"
-                    />
-                  </div>
-                  <div className="col-1">
-                    <button type="submit" class="btn btn-light w-200">
-                      Search
-                    </button>
-                  </div>
-                  <div className="col-1">
-                    <button
-                      type="submit"
-                      class="btn btn-dark w-200"
-                      id="current-button"
-                    >
-                      Current
-                    </button>
-                  </div>
-                </div>
-              </form>
-
-              <h1 className="current-date-time">Current Date & Time</h1>
-              <h2 className="city" id="city-name">
-                City
+              <Search />
+              <h2 className="current-date-time">
+                <CurrentDateTime />
               </h2>
 
               <div className="row">
