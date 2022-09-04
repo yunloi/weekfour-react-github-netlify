@@ -4,7 +4,7 @@ import CurrentDateTime from "./CurrentDateTime";
 import "./styles.css";
 
 export default function Search(props) {
-  const [city, setCity] = useState(props.defaultCity);
+  const [city, setCity] = useState("");
   const [loaded, setLoaded] = useState(false);
   const [weather, setWeather] = useState({});
 
@@ -22,35 +22,31 @@ export default function Search(props) {
     });
   }
 
-  function searchCity(city) {
+  function handleSubmit(event) {
+    event.preventDefault();
     let apiKey = "a86e9d84a9cef96d075ec236ba74b9d6";
     let units = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(displayWeather);
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    searchCity(city);
-  }
-
   function updateCity(event) {
     setCity(event.target.value);
   }
 
-  function retrieveLocation(position) {
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
-    let units = "metric";
-    let apiKey = "a86e9d84a9cef96d075ec236ba74b9d6";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-    axios.get(apiUrl).then(displayWeather);
-  }
+  //function getCurrentPosition(event) {
+  //event.preventDefault();
+  //navigator.geolocation.getCurrentPosition(retrieveLocation);
+  // }
 
-  function getCurrentPosition(event) {
-    event.preventDefault();
-    navigator.geolocation.getCurrentPosition(retrieveLocation);
-  }
+  //function retrieveLocation(position) {
+  //let latitude = position.coords.latitude;
+  //let longitude = position.coords.longitude;
+  //let units = "metric";
+  //let apiKey = "a86e9d84a9cef96d075ec236ba74b9d6";
+  //let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  //axios.get(apiUrl).then(displayWeather);
+  //}
 
   let form = (
     <div className="Search">
@@ -64,7 +60,7 @@ export default function Search(props) {
               autocomplete="off"
               autofocus="on"
               id="search-city-input"
-              class="form-control search-city"
+              className="form-control search-city"
             />
           </div>
           <div className="col-1">
@@ -75,9 +71,9 @@ export default function Search(props) {
           <div className="col-1">
             <button
               type="submit"
-              class="btn btn-dark w-200"
+              className="btn btn-dark w-200"
               id="current-button"
-              onClick={getCurrentPosition}
+              //onClick={getCurrentPosition}
             >
               Current
             </button>
@@ -92,7 +88,7 @@ export default function Search(props) {
       <div>
         {form}
         <h1 className="city" id="city-name">
-          {props.data.city}
+          {weather.city}
         </h1>
         <h2 className="current-date-time">
           <CurrentDateTime />

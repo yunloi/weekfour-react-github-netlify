@@ -1,6 +1,6 @@
 import React from "react";
 import Search from "./Search";
-import CurrentDateTime from "./CurrentDateTime";
+import Forecast from "./Forecast";
 import "./styles.css";
 
 export default function App() {
@@ -37,12 +37,12 @@ export default function App() {
         <div className="container">
           <div className="wrapper">
             <div className="weather-frame">
-              <Search defaultCity="Sydney" />
+              <Search />
 
               <hr />
               <h4>Next 5 Days</h4>
-
               <div className="weather-forecast" id="forecast"></div>
+              <Forecast />
             </div>
             <div className="source-code">
               <a
