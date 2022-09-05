@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import CurrentDateTime from "./CurrentDateTime";
 import "./styles.css";
 
 export default function Search(props) {
@@ -90,9 +89,7 @@ export default function Search(props) {
         <h1 className="city" id="city-name">
           {weather.city}
         </h1>
-        <h2 className="current-date-time">
-          <CurrentDateTime />
-        </h2>
+
         <div className="row">
           <div className="col-4">
             <div className="fix-icon">
@@ -112,11 +109,11 @@ export default function Search(props) {
                   {Math.round(weather.temperature)}
                 </span>
                 <span className="units">
-                  <a href="#" class="active" id="link-celsius">
+                  <a href="/" class="active" id="link-celsius">
                     ℃
                   </a>{" "}
                   |
-                  <a href="#" id="link-fahrenheit">
+                  <a href="/" id="link-fahrenheit">
                     ℉
                   </a>
                   <div className="now" id="temperature-description">

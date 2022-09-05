@@ -1,6 +1,7 @@
 import React from "react";
 import Search from "./Search";
 import Forecast from "./Forecast";
+import CurrentDateTime from "./CurrentDateTime";
 import "./styles.css";
 
 export default function App() {
@@ -37,6 +38,9 @@ export default function App() {
         <div className="container">
           <div className="wrapper">
             <div className="weather-frame">
+              <h2 className="current-date-time">
+                <CurrentDateTime />
+              </h2>
               <Search />
 
               <hr />
@@ -46,12 +50,16 @@ export default function App() {
             </div>
             <div className="source-code">
               <a
-                href="https://github.com/yunloi/Plus-FinalProject-WeatherApp"
+                href="https://github.com/yunloi/weekfour-react-github-netlify.git"
                 target="_blank"
+                rel="noreferrer"
               >
                 Open source code
+              </a>{" "}
+              by Yun Loi Lok, hosted on{" "}
+              <a href="/" target="_blank" rel="noreferrer">
+                Netlify
               </a>
-              by Yun Loi Lok
             </div>
           </div>
         </div>
