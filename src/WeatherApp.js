@@ -57,7 +57,11 @@ export default function App() {
                 Open source code
               </a>{" "}
               by Yun Loi Lok, hosted on{" "}
-              <a href="/" target="_blank" rel="noreferrer">
+              <a
+                href="https://prismatic-marzipan-5019b4.netlify.app"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Netlify
               </a>
             </div>
